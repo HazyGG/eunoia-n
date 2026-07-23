@@ -1,4 +1,5 @@
 # eunoia-n
+
 A small project dedicated to someone whose name begins with N.
 
 This project was created with no practical purpose, no particular function, and no intention of solving any real-world problem.
@@ -8,3 +9,5 @@ So, if you ever find yourself reading this, N..
 I am endlessly grateful that you exist in my life. Quite literally..
 
 Happy birthday, N! ^~^
+
+G ♡ N
