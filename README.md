@@ -8,6 +8,4 @@ Inside these lines are things that cannot be properly expressed through variable
 So, if you ever find yourself reading this, N..
 I am endlessly grateful that you exist in my life. Quite literally..
 
-Happy birthday, N! ^~^
-
 G ♡ N
