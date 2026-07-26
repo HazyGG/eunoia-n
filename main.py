@@ -86,3 +86,16 @@ if excited:
     sentence = new_sentence
     
 print (sentence)
+
+#======================
+
+sentence = 'Hello World'
+excited = True
+
+if excited:
+    new_sentence = ' '
+    for char in sentence:
+        new_sentence += char + '!'
+    sentence = new_sentence
+
+print(sentence)
