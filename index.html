@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang ="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Lover! ♡</title>
+    <meta name="description" content="A romantic vintage digital scrapbook birthday surprise site.">
+    
+    <!-- Google Fonts: Typewriter (Courier Prime, Special Elite) & Handwriting (Caveat, Dancing Script) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@500;700&family=Special+Elite&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <audio id="bg-audio" src="every-summertime.mp3" preload="auto"></audio>
+    
+    <div id="audio-status-toast" class="audio-toast hidden"></div>
+
+    <main class="scrapbook-container">
+        <section id="phase-1" class="phase-section active">
+            <div class="greeting-box">
+                <p id="greeting-text" class= tupewriter-text"></p>
+                <span class="cursor" aria-hidden="true">|</span>
+            </div>
+        </section>
+
+        <section id="phase-2" class="phase-section hidden">
+            <div class="music-trigger-wrapper" id="music-trigger-wrapper">
+                <button id="btn-play-music" class="vintage-btn handwriting-text">
+                    <span class="btn-icon">♪</span> Play music
+                </button>
+            </div>
+
+            <div id="lyrics-container" class="lyrics-container hidden">
+                <div class="lyrics-card">
+                    <div class="vintage-stamp">♥ NIKI - Every Summertime</div>
+                    <div id="lyrics-display" class="lyrics-display">
+                    </div>
+                </div>
+            </div>
+
+            <div id="phase3-trigger-wrapper" class="phase3-trigger-wrapper hidden">
+                <button id="btn-show-gallery" class="vintage-btn handwriting-text pulse-glow">
+                    Let's take a look at us <span class="btn-arrow">→</span>
+                </button>
+            </div>
+                
+        <section id="phase-3" class="phase-section hidden"
+            <header class="gallery-header">
+                <h1 class="gallery-title handwriting-text">Our Memories</h1>
+                <p class="gallery-subtitle typewriter-text">"Every moment with you is my favorite moment.</p>
+                <div class="header-divider"></div>
+            </header>
+
+            <div class="masonry-gallery" id="masonry-gallery">
+
+                <article class="polaroid-card" data-full="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1200&q=80" data-caption="The day everything felt magical ✨">
+                    <div class="washi-tape tape-1"></div>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80" alt="Romantic golden sunset together" loading="lazy">
+                    </div>
+                    <p class="polaroid-caption handwriting-text">The day everything felt magical ✨</p>
+                 </article>
+                
+                 <article class="polaroid-card" data-full="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1200&q=80" data-caption="Holding hands & matching smiles 🤍">
+                    <div class="washi-tape tape-2"></div>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80" alt="Couple holding hands in warm sunlight" loading="lazy">
+                    </div>
+                    <p class="polaroid-caption handwriting-text">Holding hands & matching smiles 🤍</p>
+                </article>
+
+                <article class="polaroid-card" data-full="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80" data-caption="Random giggles and sweet coffee dates ☕">
+                    <div class="washi-tape tape-3"></div>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80" alt="Cozy laughter and coffee" loading="lazy">
+                    </div>
+                    <p class="polaroid-caption handwriting-text">Random giggles and sweet coffee dates ☕</p>
+                </article>
+
+                <article class="polaroid-card" data-full="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&fit=crop&w=1200&q=80" data-caption="Every summertime with you 🌻">
+                    <div class="washi-tape tape-4"></div>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&fit=crop&w=600&q=80" alt="Golden hour field date" loading="lazy">
+                    </div>
+                    <p class="polaroid-caption handwriting-text">Every summertime with you 🌻</p>
+                </article>
+        
+                <article class="polaroid-card" data-full="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1200&q=80" data-caption="My favorite person in the entire world 🌎❤️">
+                    <div class="washi-tape tape-1"></div>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80" alt="Warm hug and happy moment" loading="lazy">
+                    </div>
+                    <p class="polaroid-caption handwriting-text">My favorite person in the entire world 🌎❤️</p>
+                </article>
+
+                <article class="polaroid-card" data-full="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80" data-caption="Look at that cute smile! (salting lagi kan? 🙈)">
+                    <div class="washi-tape tape-3"></div>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Portrait with beautiful lighting" loading="lazy">
+                    </div>
+                    <p class="polaroid-caption handwriting-text">Look at that cute smile! (salting lagi kan? 🙈)</p>
+                </article>
+
+                <article class="polaroid-card" data-full="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?auto=format&fit=crop&w=1200&q=80" data-caption="Forever & always, happy birthday lover 🎂💕">
+                    <div class="washi-tape tape-2"></div>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?auto=format&fit=crop&w=600&q=80" alt="Romantic evening light" loading="lazy">
+                    </div>
+                    <p class="polaroid-caption handwriting-text">Forever & always, happy birthday lover 🎂💕</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div id="lightbox-modal" class="lightbox-modal hidden" aria-hidden="true" role="dialog">
+        <div class="lightbox-overlay" id="lightbox-overlay"></div>
+        <div class="lightbox-content">
+            <button id="lightbox-close" class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+            <div class="polaroid-card lightbox-polaroid">
+                <div class="washi-tape tape-modal"></div>
+                <div class="polaroid-img-wrapper">
+            <img id="lightbox-img" src="" alt="Enlarged view">
+            </div>
+            <p id="lightbox-caption" class="polaroid-caption handwriting-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
