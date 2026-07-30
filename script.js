@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     { text: "salting dong plis (ᗒᗣᗕ)", duration: 4000 },
     {
-      text: "HAPPY BIRTDAY, my lover, my mine, my segalanya lah pokoknya (≧◡≦)",
+      text: "HAPPY BIRTHDAY, my lover, my mine, my segalanya lah pokoknya (≧◡≦)",
       duration: 8000,
     },
     { text: "kado kamu tahun ini....", duration: 5000 },
@@ -125,8 +125,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }, item.delay);
     });
 
-    const lastItem = lyricsSequence[lyricsSequence.lenght - 1];
-    const totallyLyricsDuration = lastItem.delay + 4500;
+    const lastItem = lyricsSequence[lyricsSequence.length - 1];
+    const totalLyricsDuration = lastItem.delay + 4500;
 
     setTimeout(() => {
       phase3TriggerWrapper.classList.remove("hidden");
@@ -187,5 +187,5 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "";
   }
 
-  runPhase1;
+  runPhase1();
 });

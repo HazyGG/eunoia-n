@@ -38,8 +38,8 @@ body {
 }
 
 .grain-overlay {
-  position: fixid;
-  top: o;
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -91,7 +91,7 @@ body::before {
   justify-content: center;
   transition:
     opacity 0.8s ease,
-    transform 0.8 ease;
+    transform 0.8s ease;
 }
 
 .phase-section.hidden {
@@ -128,7 +128,7 @@ body::before {
 #greeting-text {
   font-size: clamp(1.4rem, 3.5vw, 2.3rem);
   font-weight: 700;
-  color: var (--ink-primary);
+  color: var(--ink-primary);
   line-height: 1.6;
   letter-spacing: 0.5px;
   min-height: 3rem;
@@ -140,7 +140,7 @@ body::before {
   font-weight: 400;
   color: var(--accent-rose-dark);
   margin-left: 4px;
-  animation: blink 0.9 infinite;
+  animation: blink 0.9s infinite;
 }
 
 @keyframes blink {
@@ -325,7 +325,7 @@ body::before {
 }
 
 .gallery-title {
-  font-size: lamp(2.8rem, 6vw, 4.2rem);
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
   color: var(--ink-primary);
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -333,7 +333,7 @@ body::before {
 }
 
 .gallery-subtitle {
-  font-size: clamp(0, 95remm 1, 8vw, 1.15rem);
+  font-size: clamp(0, 95rem 1, 8vw, 1.15rem);
   color: var(--ink-secondary);
   font-style: italic;
   letter-spacing: 0.3px;
@@ -343,7 +343,7 @@ body::before {
   width: 80px;
   height: 2px;
   background: var(--accent-rose);
-  margin: 1.2ren auto 0;
+  margin: 1.2rem auto 0;
   border-radius: 2px;
   opacity: 0.7;
 }
@@ -483,7 +483,7 @@ body::before {
 
 .lightbox-modal.hidden {
   display: none !important;
-  opacity: o;
+  opacity: 0;
   pointer-events: none;
 }
 
@@ -561,10 +561,10 @@ body::before {
 .lightbox-close:hover {
   background: var(--accent-rose);
   color: white;
-  transform: scake(1.1) rotate(90deg);
+  transform: scale(1.1) rotate(90deg);
 }
 
-.audio.toast {
+.audio-toast {
   position: fixed;
   bottom: 20px;
   right: 20px;
