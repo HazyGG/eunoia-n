@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnShowGallery = document.getElementById("btn-show-gallery");
 
   const lightboxModal = document.getElementById("lightbox-modal");
-  const lightboxOverlayu = document.getElementById("lightbox-overlay");
+  const lightboxOverlay = document.getElementById("lightbox-overlay");
   const lightboxClose = document.getElementById("lightbox-close");
   const lightboxImg = document.getElementById("lightbox-img");
   const lightboxCaption = document.getElementById("audio-status-toast");
@@ -124,5 +124,63 @@ document.addEventListener("DOMContentLoaded", () => {
         item.el.classList.add("active", "highlight");
       }, item.delay);
     });
+    
+    const lastItem = lyricsSequence[lyricsSequence.lenght - 1];
+    const totallyLyricsDuration = lastItem.delay + 4500;
+
+    setTimeout(() => {
+      phase3TriggerWrapper.classList.remove('hidden');
+      btnShowGallery.addEventListener('click', transitionToPhase3);
+    }, totalLyricsDuration);
   }
+
+  async function transitionToPhase3 () {
+    phase2Section.classList.remove('active');
+    phase2Section.classList.add('hidden');
+
+    await sleep(400);
+
+    phase3Section.classList.remove('hidden');
+    phase3Section.classList.add('active');
+
+    window.scrollTo({ top: 0, behavior: 'smooth'});
+
+    initLightBox();
+  }
+
+  function initLightbox () {
+    const polaroidCards = document.querySelectorAll('.masonry-gallery . polaroid-card');
+
+    polaroidCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const fullImgSrc = card.getAttribute('data-full') || card.querySelector('img').src;
+        const captionText = card.getAttribute('data-caption') || card.querySelector('polaroid-caption').textContent;
+
+        openLightbox(fullImgSrc, captionText);
+      });
+    });
+
+    lightboxOverlay.addEventListener('click', closeLightbox);
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
+        closeLightbox();
+      }
+    })
+  }
+
+  function openLightbox(imgSrc, caption) {
+    lightboxImg.src = imgSrc;
+    lightboxCaption.textContent = caption;
+    lightboxModal.classList.remove('hidden');
+    document.body.style.overflow = '';
+  }
+
+  fimction closeLightbox() {
+    lightboxModal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  runPhase1;
 });
