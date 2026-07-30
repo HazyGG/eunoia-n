@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnPlayMusic = document.getElementById("btn-play-music");
   const musicTriggerWrapper = document.getElementById("music-trigger-wrapper");
   const lyricsContainer = document.getElementById("lyrics-container");
-  const lyricDisplay = document.getElementById("lyrics-display");
+  const lyricsDisplay = document.getElementById("lyrics-display");
 
   const phase3TriggerWrapper = document.getElementById(
     "phase3-trigger-wrapper",
@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const lightboxOverlay = document.getElementById("lightbox-overlay");
   const lightboxClose = document.getElementById("lightbox-close");
   const lightboxImg = document.getElementById("lightbox-img");
-  const lightboxCaption = document.getElementById("audio-status-toast");
+  const lightboxCaption = document.getElementById("lightbox-caption");
+  const audioToast = document.getElementById("audio-status-toast");
 
   const greetingSequence = [
     { text: "haloo, jadi umm....", duration: 5000 },
@@ -85,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initPhase2();
   }
 
-  function iniPhase2() {
+  function initPhase2() {
     phase2Section.classList.remove("hidden");
     phase2Section.classList.add("active");
 
@@ -96,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     musicTriggerWrapper.classList.add("hidden");
 
     if (bgAudio) {
-      bgAudio.Play().catch((err) => {
+      bgAudio.play().catch((err) => {
         console.warn("Audio playback failed:", err);
         showToast("♪ Playing NIKI - Every Summertime");
       });
@@ -112,8 +113,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const lineElements = lyricsSequence.map((item) => {
       const p = document.createElement("p");
-      p.ClassName = "lyric-line";
-      p.TextContent = item.text;
+      p.className = "lyric-line";
+      p.textContent = item.text;
       lyricsDisplay.appendChild(p);
       return { el: p, delay: item.delay };
     });
@@ -145,12 +146,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.scrollTo({ top: 0, behavior: "smooth" });
 
-    initLightBox();
+    initLightbox();
   }
 
   function initLightbox() {
     const polaroidCards = document.querySelectorAll(
-      ".masonry-gallery . polaroid-card",
+      ".masonry-gallery .polaroid-card",
     );
 
     polaroidCards.forEach((card) => {

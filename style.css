@@ -9,8 +9,8 @@
   --tape-color-1: rgba(224, 195, 168, 0.65);
   --tape-color-2: rgba(196, 139, 159, 0.45);
   --tape-color-3: rgba(201, 178, 140, 0.55);
-  --shadow-polarid:
-    0 010px 24px -4px rgba(45, 35, 28, 0.16), 0 3px 8px rgba(0, 0, 0, 0.06);
+  --shadow-polaroid:
+    0 10px 24px -4px rgba(45, 35, 28, 0.16), 0 3px 8px rgba(0, 0, 0, 0.06);
   --shadow-hover:
     0 18px 36px -6px rgba(45, 35, 28, 0.22), 0 6px 14px rgba(0, 0, 0, 0.1);
   --font-typewriter: "Courier Prime", "Special Elite", monospace;
@@ -154,11 +154,11 @@ body::before {
 }
 
 .fade-in {
-  animation: fadeIn 0.8 ease forwards;
+  animation: fadeIn 0.8s ease forwards;
 }
 
 .fade-out {
-  animation: fadeOut 0.8 ease forwards;
+  animation: fadeOut 0.8s ease forwards;
 }
 
 @keyframes fadeIn {
@@ -250,7 +250,7 @@ body::before {
 }
 
 .lyrics-card {
-  background: var(--polarid-bg);
+  background: var(--polaroid-bg);
   border: 1px solid #e3d7c5;
   padding: 3rem 2.5rem;
   border-radius: 4px;
@@ -333,7 +333,7 @@ body::before {
 }
 
 .gallery-subtitle {
-  font-size: clamp(0, 95rem 1, 8vw, 1.15rem);
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
   color: var(--ink-secondary);
   font-style: italic;
   letter-spacing: 0.3px;
@@ -365,6 +365,22 @@ body::before {
   .masonry-gallery {
     column-count: 1;
   }
+}
+
+.polaroid.card {
+  break-inside: avoid;
+  margin-bottom: 32px;
+  background: var(--polaroid-bg);
+  padding: 14px 14px 42px 14px;
+  border: #e8dfce;
+  border-radius: 2px;
+  box-shadow: var(--shadow-polaroid);
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 
 .polaroid-card:nth-child(odd) {
@@ -472,7 +488,7 @@ body::before {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -543,7 +559,7 @@ body::before {
   right: -20px;
   width: 42px;
   height: 42px;
-  background: var(--polarid-bg);
+  background: var(--polaroid-bg);
   color: var(--ink-primary);
   border: 1px solid #d8ccba;
   border-radius: 50%;
@@ -575,7 +591,7 @@ body::before {
   font-size: 0.85rem;
   font-family: var(--font-typewriter);
   z-index: 500;
-  transition: opacity 0.4 ease;
+  transition: opacity 0.4s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
