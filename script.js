@@ -44,12 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
       text: "Baby, I'd give up anything to travel inside your mind",
       delay: 1000,
     },
-    { text: "Baby, I fall in love again come every summertime", delay: 5500 },
+    { text: "Baby, I fall in love again come every summertime", delay: 7000 },
     {
       text: "My daddy taught me to choose 'em wisely, but you don't have to try",
-      delay: 10500,
+      delay: 13000,
     },
-    { text: "'Cause, baby, I fall in love every summertime", delay: 16000 },
+    { text: "'Cause, baby, I fall in love every summertime", delay: 19000 },
   ];
 
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
